@@ -4,23 +4,29 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="">
-		<title>Portfolio of Jesse Gilbride</title>
+		<meta name="description" content="My name is Jesse and I'm a web developer in the Boston area with over five years of experience in creating functional websites.">
+		<title>Jesse Gilbride, Front End Dev and Thinkful Student</title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+		
+		<!-- load custom styles after normalize -->
 		<link href="styles.css" rel="stylesheet">
+		
+		<!-- load fonts after other styles -->
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap" rel="stylesheet">
+
+
 	</head>
 
 	<body>
-
-		<header>
-			<div>
-				<h1 class="header-logo">
-					Portfolio of Jesse Gilbride
-				</h1>
-			</div>
-			<div>
+		
+		<!-- PAGE HEADER -->
+		<header class="page-header">
+			<div class="centered-container">
+				<div class="page-header-left">
+					<h1 class="header-logo">Jesse Gilbride</h1>
+					<h2>Front End Developer &amp; Thinkful Student</h2>
+				</div>
 				<nav>
-					<a href="#intro">Intro</a>
 					<a href="#about">About Me</a>
 					<a href="#contact">Contact</a>
 				</nav>
@@ -28,37 +34,79 @@
 		</header>
 
 		<main>
-			<div>
+			<div class="centered-container">
 
-				<article id="intro">
+				<!-- INTRO -->
+				<article>
 					<section>
-						<header>
-							<h2>Introduction</h2>
-						</header>
+						<div class="headshot-container">
+							<img src="images/headshot.jpg" alt="headshot" />
+						</div>
+						<div>
+							<header>
+								<h2>Hi, I'm Jesse.</h2>
+							</header>
+							<p>I'm a web developer in the Boston area with over five years of experience in translating designs and requirements into functional websites, with keen attention on user experience. I enjoy mobile-first wireframing, UI prototyping, interaction design, and coding web apps.</p>
+						</div>
 					</section>
 				</article>
 
+				<hr>
+
+				<!-- ABOUT -->
 				<article id="about">
 					<section>
 						<header>
 							<h2>About Me</h2>
 						</header>
+						<p>I graduated with a BS in Computer Engineering from Wentworth IT (Boston, MA) and while I excelled and enjoyed my education greatly, the job market after the economic crash of 2008 left me seeking a career that allowed me to be more creative and hopefully recession-proof. So I embarked on becoming a Front End Web Developer by learning as much as I could through books, web tutorials, and peeking at what other great devs have done (via the browser's code inspector, of course).</p>
+						<p>After five years of working in the field, though, I found that it was getting very difficult to pick up certain skills that are crucial for today's web developers to be marketable and successful, which led me <a href="https://www.thinkful.com">Thinkful</a>. I'm very excited to discover what amazing things I will build as I go through the coursework. As time progresses, I will add those works (or links to them) on this site for all to see.</p>
+						<p>I have worked as both freelancer and team member at several companies and love the process and working with others. If you need any work done or want to consider a collaboration, please reach out. You can find me via the <a href="#contact">contact links</a> below.</p>
+						<p>Beyond web development, my other interest include:</p>
+						<ul>
+							<li>weight lifting (mostly powerlifting) and conditioning</li>
+							<li>learning cosmological physics</li>
+							<li>singing karaoke</li>
+							<li>playing guitar</li>
+							<li>cooking (breakfasts and dinners)</li>
+							<li>making awesome lattes</li>
+						</ul>
 					</section>
 				</article>
 
+				<hr>
+
+				<!-- CONTACT -->
 				<article id="contact">
 					<section>
 						<header>
 							<h2>Contact</h2>
 						</header>
+						<p>Feel free to reach out. You can fine me via the platforms listed below.</p>
+						<!-- Note to graders: An ordered list just doesn't make semantic sense on this page right now, so put one here, per requirement, but styled it without numbers. I hope you understand. -->
+						<ol class="contact-list">
+							<li>
+								<a href="https://www.linkedin.com/in/jessegilbride/" target="_blank">LinkedIn</a>
+							</li>
+							<li>
+								<a href="https://github.com/jessegilbride/" target="_blank">GitHub</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/jessegilbride" target="_blank">Twitter</a>
+							</li>
+							<!-- <li>
+								<a href="https://jessegilbride.hashnode.dev/" target="_blank">HashNode</a>
+							</li> -->
+						</ol>
 					</section>
 				</article>
 
 			</div>
 		</main>
 
+		<!-- PAGE FOOTER -->
 		<footer class="page-footer">
-			<div>
+			<div class="centered-container">
 				<p>Copyright Jesse Gilbride. All rights reserved.</p>
 			</div>
 		</footer>

@@ -1,0 +1,101 @@
+/* Note to graders: I did not attempt RWD or a mobile-first approach, I figured that since this is an early draft and it wasn't part of the spec, it's okay to leave out for now. */
+
+body {background-color: #fff0ee;}
+
+/* put content into the center of the page */
+.centered-container {
+  margin: 0 auto;
+	width: 960px;
+}
+
+/* make section headings match size and feel of paragraphs, etc. */
+section h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: unset;
+}
+
+/* boost content size (also to match headings) for readability */
+p, ul, ol {
+  font-size: 1.5rem;
+}
+
+header.page-header {
+  padding: 1rem;
+  background-color: rgb(87, 75, 96);
+  color: #FE8546;
+}
+
+/* split top headings from nav in the header */
+header.page-header .page-header-left {
+  display: inline-block;
+  text-align: left;
+  width: 49%;
+  min-width: 400px;
+}
+
+header.page-header .page-header-left h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+}
+
+header.page-header .page-header-left h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+/* split nav from headings in the page header */
+header.page-header nav {
+  display: inline-block;
+  text-align: right;
+  width: 49%;
+  min-width: 200px;
+}
+
+header.page-header nav a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+
+header.page-header nav a:link {color: rgb(234, 240, 206);}
+header.page-header nav a:visited {color: rgb(234, 240, 206);}
+header.page-header nav a:hover {color: #7d8491;}
+header.page-header nav a:active {color: rgb(234, 240, 206)}
+
+main article {
+  min-height: 400px;
+  padding: 4rem 2rem;
+}
+
+.headshot-container {
+  text-align: center;
+}
+
+/* make headshot photo a circle and appropriate size */
+.headshot-container img {
+  border-radius: 50%;
+  width: 400px;
+}
+
+.contact-list li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+footer.page-footer {
+  position: relative;
+  height: 200px;
+  background-color: #3f334d;
+  color: #eaf0ce;
+}
+
+footer.page-footer p {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+}
