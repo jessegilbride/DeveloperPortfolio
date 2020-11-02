@@ -3,8 +3,8 @@
 
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="My name is Jesse and I'm a web developer in the Boston area with over five years of experience in creating functional websites.">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+		<meta name="description" content="My name is Jesse and I'm a web developer in the Boston area with over five years of experience in creating responsive websites.">
 		<title>Jesse Gilbride, Front End Dev and Thinkful Student</title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 		
@@ -21,60 +21,120 @@
 		
 		<!-- PAGE HEADER -->
 		<header class="page-header">
-			<div class="centered-container">
-				<div class="page-header-left">
+			<div class="page-header-inner-container centered-container flex-container">
+				<div class="page-header-title flex-item-1x">
 					<h1 class="header-logo">Jesse Gilbride</h1>
 					<h2>Front End Developer &amp; Thinkful Student</h2>
 				</div>
-				<nav>
-					<a href="#about">About Me</a>
-					<a href="#contact">Contact</a>
+				<nav class="flex-container flex-item-1x">
+					<a href="#about" class="flex-item-1x">About</a>
+					<!-- <a href="#services">Services</a> -->
+					<a href="#projects" class="flex-item-1x">Projects</a>
+					<a href="#contact" class="flex-item-1x">Contact</a>
 				</nav>
 			</div>
+			
 		</header>
 
 		<main>
 			<div class="centered-container">
 
-				<!-- INTRO -->
-				<article>
-					<section>
-						<div class="headshot-container">
-							<img src="images/headshot.jpg" alt="headshot" />
-						</div>
-						<div>
-							<header>
-								<h2>Hi, I'm Jesse.</h2>
-							</header>
-							<p>I'm a web developer in the Boston area with over five years of experience in translating designs and requirements into functional websites, with keen attention on user experience. I enjoy mobile-first wireframing, UI prototyping, interaction design, and coding web apps.</p>
-						</div>
-					</section>
-				</article>
-
-				<hr>
-
 				<!-- ABOUT -->
 				<article id="about">
+					<section class="flex-container flex-align-center flex-row-reverse intro-spacer">
+						<div class="headshot-container flex-item-1x">
+							<img src="images/headshot.jpg" alt="headshot" />
+						</div>
+						<div class="flex-item-1x">
+							<header>
+								<h2 class="intro-greeting">Hi, I'm Jesse.</h2>
+							</header>
+							<p>I'm a web developer in the Boston area with over five years of experience in translating designs and requirements into functional websites.</p>
+						</div>
+					</section>
 					<section>
 						<header>
 							<h2>About Me</h2>
 						</header>
-						<p>I graduated with a BS in Computer Engineering from Wentworth IT (Boston, MA) and while I excelled and enjoyed my education greatly, the job market after the economic crash of 2008 left me seeking a career that allowed me to be more creative and hopefully recession-proof. So I embarked on becoming a Front End Web Developer by learning as much as I could through books, web tutorials, and peeking at what other great devs have done (via the browser's code inspector, of course).</p>
-						<p>After five years of working in the field, though, I found that it was getting very difficult to pick up certain skills that are crucial for today's web developers to be marketable and successful, which led me <a href="https://www.thinkful.com">Thinkful</a>. I'm very excited to discover what amazing things I will build as I go through the coursework. As time progresses, I will add those works (or links to them) on this site for all to see.</p>
-						<p>I have worked as both freelancer and team member at several companies and love the process and working with others. If you need any work done or want to consider a collaboration, please reach out. You can find me via the <a href="#contact">contact links</a> below.</p>
-						<p>Beyond web development, my other interest include:</p>
+						<p>I have worked as both freelancer and team member at companies, large and small, to create web experiences that provide value and encourage engagement. I enjoy working with others and the challenges turning ideas into reality. If you are looking for a web developer or are considering a collaboration, please reach out. You can find me via the <a href="#contact">contact links</a> below.</p>
+						<h3 id="services">My services include... </h3>
 						<ul>
-							<li>weight lifting (mostly powerlifting) and conditioning</li>
-							<li>learning cosmological physics</li>
-							<li>singing karaoke</li>
-							<li>playing guitar</li>
-							<li>cooking (breakfasts and dinners)</li>
-							<li>making awesome lattes</li>
+							<!-- idea: get icons for these? -->
+							<li>web application development</li>
+							<li>marketing &amp; informational websites</li>
+							<li>product/service landing pages</li>
+							<li>responsive web design</li>
 						</ul>
+						<p>I don't just bang away at the keyboard, making things for the web. My other interest include: weight lifting (mostly powerlifting), yoga, studying cosmology and quantum mechanics, singing karaoke, playing guitar, cooking, making awesome lattes (ex-barista, here<!-- insert hand-raise icon -->).</p>
 					</section>
 				</article>
 
-				<hr>
+				<!-- PROJECTS -->
+				<article id="projects">
+					<section>
+
+						<header>
+							<h2>Projects</h2>
+						</header>
+
+						<div class="flex-container flex-wrap flex-spaced-evenly">
+
+							<div class="project">
+								<img class="project-image" src="images/placeholder.png" alt="placeholder" />
+								<div>
+									<h3>title</h3>
+									<p class="project-description">description</p>
+									<div class="project-tech-stack"></div>
+									<div class="project-links">
+										<a class="project-link" href="" target="_blank">GitHub</a>
+										<a class="project-link" href="" target="_blank">Demo</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="project">
+								<img class="project-image" src="images/placeholder.png" alt="placeholder" />
+								<div>
+									<h3>title</h3>
+									<p class="project-description">description</p>
+									<div class="project-tech-stack"></div>
+									<div class="project-links">
+										<a class="project-link" href="" target="_blank">GitHub</a>
+										<a class="project-link" href="" target="_blank">Demo</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="project">
+								<img class="project-image" src="images/placeholder.png" alt="placeholder" />
+								<div>
+									<h3>title</h3>
+									<p class="project-description">description</p>
+									<div class="project-tech-stack"></div>
+									<div class="project-links">
+										<a class="project-link" href="" target="_blank">GitHub</a>
+										<a class="project-link" href="" target="_blank">Demo</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="project">
+								<img class="project-image" src="images/placeholder.png" alt="placeholder" />
+								<div>
+									<h3>title</h3>
+									<p class="project-description">description</p>
+									<div class="project-tech-stack"></div>
+									<div class="project-links">
+										<a class="project-link" href="" target="_blank">GitHub</a>
+										<a class="project-link" href="" target="_blank">Demo</a>
+									</div>
+								</div>
+							</div>
+
+						</div><!-- END .flex-container -->
+
+					</section>
+				</article>
 
 				<!-- CONTACT -->
 				<article id="contact">
@@ -83,21 +143,24 @@
 							<h2>Contact</h2>
 						</header>
 						<p>Feel free to reach out. You can fine me via the platforms listed below.</p>
-						<!-- Note to graders: An ordered list just doesn't make semantic sense on this page right now, so put one here, per requirement, but styled it without numbers. I hope you understand. -->
-						<ol class="contact-list">
+						<ul class="contact-list list-style-none">
+							<!-- TO DO: get icons for the links below -->
 							<li>
-								<a href="https://www.linkedin.com/in/jessegilbride/" target="_blank">LinkedIn</a>
+								<a href="mailto:jessegilbride.dev@gmail.com?subject=">Email</a>
 							</li>
 							<li>
 								<a href="https://github.com/jessegilbride/" target="_blank">GitHub</a>
 							</li>
 							<li>
-								<a href="https://twitter.com/jessegilbride" target="_blank">Twitter</a>
+								<a href="https://www.linkedin.com/in/jessegilbride/" target="_blank">LinkedIn</a>
 							</li>
+							<!-- <li>
+								<a href="https://twitter.com/jessegilbride" target="_blank">Twitter</a>
+							</li> -->
 							<!-- <li>
 								<a href="https://jessegilbride.hashnode.dev/" target="_blank">HashNode</a>
 							</li> -->
-						</ol>
+						</ul>
 					</section>
 				</article>
 
@@ -107,7 +170,9 @@
 		<!-- PAGE FOOTER -->
 		<footer class="page-footer">
 			<div class="centered-container">
-				<p>Copyright Jesse Gilbride. All rights reserved.</p>
+				<p>
+					<small>Copyright Jesse Gilbride. All rights reserved.</small>
+				</p>
 			</div>
 		</footer>
 			

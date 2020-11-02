@@ -1,16 +1,29 @@
-/* Note to graders: I did not attempt RWD or a mobile-first approach, I figured that since this is an early draft and it wasn't part of the spec, it's okay to leave out for now. */
+/****************************************
+GLOBAL STYLES
+****************************************/
 
-body {background-color: #fff0ee;}
+:root {
+  --page-header-padding: 1rem;
+  --slate: #263238;
+  --orange: #FF6D2D;
+  --burnt-orange: #CC5500;
+  --sky-blue: #00CCFF;
+  --royal-blue: #4169E1;
+  --cream: #FFFDD0;
+  --plum-purple: #513653;
+}
 
-/* put content into the center of the page */
-.centered-container {
-  margin: 0 auto;
-	width: 960px;
+img {width: 100%;}
+
+section h2 {
+  font-family: sans-serif;
+  color: var(--plum-purple);
 }
 
 /* make section headings match size and feel of paragraphs, etc. */
 section h2 {
   margin-top: 0;
+  text-align: center;
   font-size: 2.5rem;
   font-weight: unset;
 }
@@ -20,38 +33,72 @@ p, ul, ol {
   font-size: 1.5rem;
 }
 
+a         {color: var(--slate);}
+a:visited {color: var(--slate);}
+a:hover   {color: var(--royal-blue);}
+a:active  {color: var(--burnt-orange)}
+
+/****************************************
+UTILITY STYLES
+****************************************/
+
+/* put content into the center of the page */
+.centered-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+/****************************************
+Page header
+****************************************/
+
 header.page-header {
-  padding: 1rem;
-  background-color: rgb(87, 75, 96);
-  color: #FE8546;
+  height: calc(100vh - var(--page-header-padding)*2);
+  padding: var(--page-header-padding);
+  background-color: var(--slate);
+  color: var(--orange);
 }
 
-/* split top headings from nav in the header */
-header.page-header .page-header-left {
-  display: inline-block;
-  text-align: left;
-  width: 49%;
-  min-width: 400px;
+/* .page-header-inner-container {
+  position: relative;
+} */
+
+.page-header-inner-container {
+  position: relative;
+  height: 100%;
 }
 
-header.page-header .page-header-left h1 {
-  margin-top: 1rem;
+header.page-header .page-header-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -70%); /* keep the 70% ? */
+  width: 100%;
+  text-align: center; /* pointless because flex align used already? */
+}
+
+header.page-header .page-header-title h1 {
+  margin-top: 0;
   margin-bottom: 1rem;
   font-family: 'Lobster', cursive;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
-header.page-header .page-header-left h2 {
+header.page-header .page-header-title h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 
-/* split nav from headings in the page header */
 header.page-header nav {
-  display: inline-block;
-  text-align: right;
-  width: 49%;
-  min-width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center; /* pointless because flex align used already? */
 }
 
 header.page-header nav a {
@@ -59,43 +106,142 @@ header.page-header nav a {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-left: 2rem;
+  margin: 2rem;
 }
 
-header.page-header nav a:link {color: rgb(234, 240, 206);}
-header.page-header nav a:visited {color: rgb(234, 240, 206);}
-header.page-header nav a:hover {color: #7d8491;}
-header.page-header nav a:active {color: rgb(234, 240, 206)}
+header.page-header nav a          {color: var(--sky-blue);}
+header.page-header nav a:visited  {color: var(--sky-blue);}
+header.page-header nav a:hover    {color: var(--royal-blue);}
+header.page-header nav a:active   {color: var(--cream)}
 
 main article {
   min-height: 400px;
   padding: 4rem 2rem;
 }
 
+/****************************************
+Intro/About section
+****************************************/
+
 .headshot-container {
   text-align: center;
 }
 
-/* make headshot photo a circle and appropriate size */
 .headshot-container img {
   border-radius: 50%;
-  width: 400px;
+  width: 80%;
+  max-width: 400px;
 }
 
+.intro-greeting {
+  font-family: 'Lobster', cursive;
+  color: var(--burnt-orange);
+}
+
+.intro-spacer {
+  margin-bottom: 2rem;;
+}
+
+/****************************************
+Project section
+****************************************/
+
+.project {
+  margin-bottom: 4rem;
+}
+
+/****************************************
+Contact section
+****************************************/
+
 .contact-list li {
-  list-style: none;
   margin: 1rem 0;
 }
+
+/****************************************
+Page footer
+****************************************/
 
 footer.page-footer {
   position: relative;
   height: 200px;
-  background-color: #3f334d;
-  color: #eaf0ce;
+  background-color: var(--plum-purple);
+  color: var(--cream);
 }
 
 footer.page-footer p {
   position: absolute;
   padding: 1rem;
   bottom: 0;
+}
+
+/****************************************
+BASE FLEXBOX STYLES
+****************************************/
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-spaced-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+/* proportional flex sizing */
+.flex-item-1x {flex: 1;}
+.flex-item-2x {flex: 2;}
+.flex-item-3x {flex: 3;}
+.flex-item-4x {flex: 4;}
+
+/****************************************
+MEDIA QUERIES
+****************************************/
+
+@media all and (min-width: 640px) {
+  .flex-container {
+    flex-direction: row;
+  }
+
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  header.page-header .page-header-title h1 {
+    font-size: 6rem;
+  }
+
+  header.page-header .page-header-title h2 {
+    font-size: 1.3rem;
+  }
+
+  header.page-header nav {
+    width: 100%;
+  }
+
+  header.page-header nav a {
+    margin: 1.5rem;
+  }
+
+  section h2 {
+    text-align: left;
+  }
+
+  .project {
+    margin: 0 2rem 4rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .project {
+    max-width: 400px;
+  }
 }
