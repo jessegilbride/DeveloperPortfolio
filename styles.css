@@ -11,13 +11,19 @@ GLOBAL STYLES
   --royal-blue: #4169E1;
   --cream: #FFFDD0;
   --plum-purple: #513653;
+  --light-mint: #aaf0df;
+}
+
+body {
+  background-color: #efefef;
 }
 
 img {width: 100%;}
 
-section h2 {
-  font-family: sans-serif;
-  color: var(--plum-purple);
+section {
+  margin: 0 auto; /* center the content */
+  max-width: 1200px;
+  padding: 4rem 2rem;
 }
 
 /* make section headings match size and feel of paragraphs, etc. */
@@ -26,12 +32,12 @@ section h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: unset;
+  font-family: sans-serif;
+  color: var(--slate);
 }
 
 /* boost content size (also to match headings) for readability */
-p, ul, ol {
-  font-size: 1.5rem;
-}
+article p, ul, ol, label {font-size: 1.3rem;}
 
 a         {color: var(--slate);}
 a:visited {color: var(--slate);}
@@ -41,12 +47,6 @@ a:active  {color: var(--burnt-orange)}
 /****************************************
 UTILITY STYLES
 ****************************************/
-
-/* put content into the center of the page */
-.centered-container {
-  margin: 0 auto;
-  max-width: 1200px;
-}
 
 .list-style-none {
   list-style: none;
@@ -105,25 +105,20 @@ header.page-header nav a {
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
-  font-weight: 600;
-  margin: 2rem;
+  margin: 1rem;
 }
 
-header.page-header nav a          {color: var(--sky-blue);}
-header.page-header nav a:visited  {color: var(--sky-blue);}
+header.page-header nav a          {color: var(--cream);}
+header.page-header nav a:visited  {color: var(--cream);}
 header.page-header nav a:hover    {color: var(--royal-blue);}
 header.page-header nav a:active   {color: var(--cream)}
-
-main article {
-  min-height: 400px;
-  padding: 4rem 2rem;
-}
 
 /****************************************
 Intro/About section
 ****************************************/
 
 .headshot-container {
+  padding-bottom: 2rem;
   text-align: center;
 }
 
@@ -139,23 +134,78 @@ Intro/About section
 }
 
 .intro-spacer {
-  margin-bottom: 2rem;;
+  /* margin-bottom: 2rem;; */
 }
 
 /****************************************
 Project section
 ****************************************/
 
+.contrast-background-light {
+  background-color: var(--light-mint);
+}
+
 .project {
   margin-bottom: 4rem;
+  color: var(--plum-purple);
 }
 
 /****************************************
 Contact section
 ****************************************/
 
+#contact form fieldset {
+  border: none;
+  border: 0;
+}
+
+#contact form label, input, textarea {
+  display: block;
+  width: 100%;
+}
+
+#contact form label {
+  margin-bottom: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#contact form input, textarea {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+}
+
+#contact form textarea {
+  min-height: 8rem;
+}
+
+#contact form button[type=submit] {
+  padding: 1rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: var(--burnt-orange);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#contact form button[type=submit]:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+}
+
+.contact-list {
+  padding-left: 0;;
+  text-align: center;
+}
+
 .contact-list li {
-  margin: 1rem 0;
+  display: inline-block;
+  margin: 2rem 1rem;
+}
+
+.contact-list a {
+  text-decoration: none;
+  font-size: 120%;
 }
 
 /****************************************
@@ -188,8 +238,12 @@ BASE FLEXBOX STYLES
   flex-wrap: wrap;
 }
 
-.flex-spaced-evenly {
-  justify-content: space-evenly;
+.flex-spaced-around {
+  justify-content: space-around;
+}
+
+.flex-spaced-between {
+  justify-content: space-between;
 }
 
 .flex-align-center {
@@ -211,8 +265,8 @@ MEDIA QUERIES
     flex-direction: row;
   }
 
-  .flex-row-reverse {
-    flex-direction: row-reverse;
+  section {
+    padding: 4rem 4rem;
   }
 
   header.page-header .page-header-title h1 {
@@ -235,13 +289,19 @@ MEDIA QUERIES
     text-align: left;
   }
 
-  .project {
-    margin: 0 2rem 4rem;
+  .contact-list li {
+    display: block;
+    margin: 3rem 1rem;
   }
 }
 
 @media all and (min-width: 1024px) {
+  .headshot-container img {
+    width: 60%;
+  }
+
   .project {
-    max-width: 400px;
+    /* max-width: 400px; */
+    max-width: 45%;
   }
 }
