@@ -11,10 +11,9 @@
 		<!-- load custom styles after normalize -->
 		<link href="styles.css" rel="stylesheet">
 		
-		<!-- load fonts after other styles -->
-		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap" rel="stylesheet">
-
-
+		<!-- load fonts and icons after other styles -->
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&family=Montserrat&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/b280402408.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
@@ -73,7 +72,7 @@
 						<h2>Projects</h2>
 					</header>
 
-					<div class="flex-container flex-wrap flex-spaced-between">
+					<div class="flex-container flex-wrap flex-space-between">
 
 						<div class="project">
 							<img class="project-image" src="images/placeholder.png" alt="placeholder" />
@@ -127,59 +126,66 @@
 							</div>
 						</div>
 
-					</div><!-- END .flex-container that holds projects-->
+					</div>
 
 				</section>
 			</article>
 
 			<!-- CONTACT -->
-			<article id="contact">
-				<section>
-					<header>
-						<h2>Contact</h2>
-					</header>
+			<section id="contact">
+				<header>
+					<h2>Contact</h2>
+				</header>
 
-					<div class="flex-container">
+				<div class="flex-container go-col-at-860">
 
-						<div class="flex-item-1x">
-							<form action="https://formspree.io/f/xzbkvzzj" method="POST">
-								<fieldset>
-									<label for="user-name">Name</label>
-									<input id="user-name" type="text" name="name" required>
-									<label for="user-email">Email</label>
-									<input id="user-email" type="text" name="email" required>
-									<label for="user-message">Message</label>
-									<textarea id="user-message" name="message" required></textarea>
-									<button type="submit">Submit</button>
-								</fieldset>
-							</form>
-						</div>
-
-						<div class="flex-item-1x">
-							<ul class="contact-list list-style-none">
-								<li>
-									<a href="mailto:jessegilbride.dev@gmail.com?subject=">Email</a>
-								</li>
-								<li>
-									<a href="https://github.com/jessegilbride/" target="_blank">GitHub</a>
-								</li>
-								<li>
-									<a href="https://www.linkedin.com/in/jessegilbride/" target="_blank">LinkedIn</a>
-								</li>
-							</ul>
-						</div>
-
+					<div class="flex-item-3x">
+						<form action="https://formspree.io/f/xzbkvzzj" method="POST">
+							<fieldset>
+								<label for="user-name">Name</label>
+								<input id="user-name" type="text" name="name" required>
+								<label for="user-email">Email</label>
+								<input id="user-email" type="text" name="email" required>
+								<label for="user-message">Message</label>
+								<textarea id="user-message" name="message" required></textarea>
+								<button type="submit">Submit</button>
+							</fieldset>
+						</form>
 					</div>
-					
-				</section>
-			</article>
+
+					<div class="flex-item-1x">
+						<ul class="contact-list list-style-none flex-container flex-container-col-override">
+							<li class="flex-item-1x">
+								<a href="mailto:jessegilbride.dev@gmail.com?subject=">
+									<i class="far fa-envelope" aria-hidden="true"></i>
+									<span class="visually-hidden">Email</span>
+								</a>
+							</li>
+							<li class="flex-item-1x">
+								<a href="https://github.com/jessegilbride/" target="_blank">
+									<i class="fab fa-github" aria-hidden="true"></i>
+									<span class="visually-hidden">GitHub</span>
+								</a>
+							</li>
+							<li class="flex-item-1x">
+								<a href="https://www.linkedin.com/in/jessegilbride/" target="_blank">
+									<i class="fab fa-linkedin" aria-hidden="true"></i>
+									<span class="visually-hidden">LinkedIn</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				
+			</section>
 		</main>
 
 		<!-- PAGE FOOTER -->
 		<footer class="page-footer">
 			<section>
 				<p>
-					<small>Copyright Jesse Gilbride. All rights reserved.</small>
+					<small>&copy; Jesse Gilbride. All rights reserved.</small>
 				</p>
 			</section>
 		</footer>
